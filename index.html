@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador Pessoal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Minha Lista de Tarefas</h1>
+        <input type="text" id="novaTarefa" placeholder="Digite uma nova tarefa">
+        <select id="categoriaTarefa">
+            <option value="Pessoal">Pessoal</option>
+            <option value="Estudo">Estudo</option>
+            <option value="Trabalho">Trabalho</option>
+        </select>
+        <button onclick="adicionarTarefa()">Adicionar</button>
+        <ul id="listaTarefas"></ul>
+    </div>
+
+    <hr>
+
+    <div class="container">
+        <h2>Controle Financeiro</h2>
+        <input type="text" id="descricao" placeholder="Descrição">
+        <select id="categoriaTransacao">
+            <option value="Alimentação">Alimentação</option>
+            <option value="Transporte">Transporte</option>
+            <option value="Lazer">Lazer</option>
+            <option value="Outros">Outros</option>
+        </select>
+        <input type="number" id="valor" placeholder="Valor (use negativo para despesa)">
+        <button onclick="adicionarTransacao()">Adicionar</button>
+
+        <h3>Transações</h3>
+        <ul id="listaTransacoes"></ul>
+
+        <h3>Saldo: R$ <span id="saldo">0.00</span></h3>
+        <canvas id="graficoCategorias" width="300" height="200"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
